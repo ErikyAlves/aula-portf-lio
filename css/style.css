@@ -15,22 +15,37 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
 }
-
 .ispecionar {
   border: 5px solid red;
 }
-
 #header {
   padding: 2rem 6rem;
 }
-
 .nav-links {
   display: flex;
   justify-content: flex-end;
   gap: 1rem;
 }
-
 .nav-links a {
   color: #ffffff;
+  position: relative;
   text-decoration: none;
+  transition: 0.3s;
+}
+.nav-links a:hover,
+nav-links a:focus {
+  color: #d5d5d5;
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0.2rem;
+  background-color: #d5d5d5;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s;
+}
+.nav-links a:hover:after {
+  width: 100%;
 }
